@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+form {
+  margin: 1rem 0 2rem;
+}
+header,
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button,
+form select {
+  padding: 0.5rem;
+  font-size: 1.25rem;
+  height: 2rem;
+  border: none;
+  background: white;
+}
+
+form input {
+  font-size: 1.25rem;
+}
+
+form button {
+  font-size: 2rem;
+  padding: 0;
+  /* border: 1px solid #ff6f47; */
+}
+
+form select {
+  margin-left: 1rem;
+  font-size: 1.0rem;
+}
+
+form button {
+  color: #ff6f47;
+  background-color: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #ff6f47;
+  color: white;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 40%;
+  list-style: none;
+}
+
+.todo {
+  min-width: 75%;
+  padding-left: 1rem;
+  margin-bottom: 0.5rem;
+  background: white;
+  font-size: 1.0rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn,
+.toggle-complete-btn {
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.trash-btn {
+  background: #ff6f47;
+}
+
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+.toggle-complete-btn {
+  background: #cdcd32;
+}
+
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+select.classic {
+  background-image:
+    linear-gradient(45deg, transparent 50%, #eeeeee 50%),
+    linear-gradient(135deg, #eeeeee 50%, transparent 50%),
+    linear-gradient(to right, #ff6f47, #ff6f47);
+  background-position:
+    calc(100% - 20px) calc(1em - 2px),
+    calc(100% - 15px) calc(1em - 2px),
+    100% 0;
+  background-size:
+    7px 7px,
+    7px 7px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  width: 12rem;
+}
+
+select.classic:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, #ff6f47, #ff6f47);
+  background-position:
+    calc(100% - 15px) calc(1em - 2px),
+    calc(100% - 20px) calc(1em - 2px),
+    100% 0;
+  background-size:
+  7px 7px,
+  7px 7px,
+  2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
